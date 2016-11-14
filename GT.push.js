@@ -155,8 +155,8 @@ GeTui.prototype.pushMessageToSingle = function (message, target, requestId, call
 GeTui.prototype.httpPostJson = function (host, postData, needGzip, callback) {
     var _this = this;
     postData.version = GtConfig.getSDKVersion();
-    console.log("===> postData:", JSON.stringify(postData));
-    // return;
+    // console.log("===> postData:", JSON.stringify(postData));
+
     httpManager.post(host, postData, needGzip, function (err, response) {
 //        console.log("httpPostJson get:" + response.result);
         if (response && response.result == "sign_error") {
